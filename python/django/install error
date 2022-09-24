@@ -1,0 +1,4 @@
+Running cells with 'Python 3.10.2 64-bit' requires ipykernel package. Run the following command to install 'ipykernel' into the Python environment. Command: 'c:/Users/rowzeal/AppData/Local/Programs/Python/Python310/python.exe -m pip install ipykernel -U --user --force-reinstall'
+
+
+ pip install ipykernel -U --user --force-reinstall

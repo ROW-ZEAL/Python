@@ -1,0 +1,5 @@
+>>>variable_not_exists# try to access an undefined variable---------------------------------------------------------------------------NameErrorTraceback(mostrecentcalllast)
+<ipython-input-11-087486976af0>in<module>---->1variable_not_exists# try to access an undefined variableNameError: name'variable_not_exists'isnotdefined
+
+From <https://github.com/sajalshres/python-e2e-book/blob/master/book/know-your-language/apply-primer/README.md> 
+

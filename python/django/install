@@ -1,0 +1,14 @@
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+
+Pip -m venv env
+\scripts\activate
+
+Pip install django
+Pip install djangorestframework
+Pip install pygments
+
+Activate / deactivate
+
+
+
