@@ -1,0 +1,8 @@
+	1. Navigate to the folder to be synced with github
+	2. Git initialize ( git init )
+	3. Git add * (add files)
+	4. Git commit -m 'Commit message'
+	5. Git status
+	6. Add remote origin to repository
+	Git  remote add origin "https://github.com/rowzeal/eklavya"
+	7. Git push origin master
