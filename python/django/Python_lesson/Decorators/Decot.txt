@@ -1,1 +1,52 @@
-abcde
+Decorators 
+    That takes functions as input and returns a new function as output.
+
+#the example of decorators 
+
+--------------------------------------------------
+def smart_divide(func):
+    def inner(a, b):
+        print("I am going to divide", a, "and", b)
+        if b == 0:
+            c= print("Whoops! cannot divide because  b is ",b)
+            return c
+        return func(a, b)
+    return inner
+
+@smart_divide
+def divide(a, b):
+    print(a/b)
+
+divide(4,2)
+----------------------------------------------
+
+decorator is called by @decorator_name 
+
+------------------------------------
+def sleep_decorator(func):
+    def sleep():
+        time.sleep(2) 
+        return func()
+    return sleep
+
+print("i am first")
+@delay_decorator
+def say_hello():
+    print("Hello after 2 sec")
+
+say_hello()
+-------------------------------------
+
+first it call the decorator and run the code of decorator after that the next code is executed.
+@delay_decorator this function will check  this 
+def sleep_decorator(func):
+    def sleep():
+        time.sleep(2) 
+        return func()
+    return sleep
+
+after that this part is executed
+def say_hello():
+    print("Hello after 2 sec")
+
+say_hello()
