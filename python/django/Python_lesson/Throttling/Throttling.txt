@@ -1,0 +1,49 @@
+simply throttle means that how many time we can give access to the user .
+
+there are 3 types of throttle
+1 Annonrate throttle
+
+2 Userrate throttle
+settings for Userrate throttle
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_THROTTLE_CLASSES': [
+        'example.throttles.BurstRateThrottle',
+        'example.throttles.SustainedRateThrottle'
+    ],
+    'DEFAULT_THROTTLE_RATES': {
+        'burst': '60/min',
+        'sustained': '1000/day'
+    }
+}
+
+how to use it 
+it give permission that we can open file for the certian time which we have define in throttle
+
+class BurstRateThrottle(UserRateThrottle):
+    scope = 'burst'
+
+class SustainedRateThrottle(UserRateThrottle):
+    scope = 'sustained'
+
+
+3 ScopedRateThrottle
+
+settings for ScopedRateThrottle
+REST_FRAMEWORK = {
+    'DEFAULT_THROTTLE_CLASSES': [
+        'rest_framework.throttling.ScopedRateThrottle',
+    ],
+    'DEFAULT_THROTTLE_RATES': {
+        'floorsheet_1': '1/min',
+        # 'sector_list1': '1/min'
+    }
+}
+
+how to use 
+from rest_framework.throttling import ScopedRateThrottle
+class floorsheet_1(APIView):
+    throttle_scope = 'floorsheet_1'
+    def get(self, request):
+        return Response(api_floorsheet_get_floorsheet(request=request))
